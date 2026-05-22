@@ -12,7 +12,7 @@ A modelagem foi desenvolvida com foco em:
 - prevenção de acidentes
 - resposta em tempo real
 
-O diagrama representa os principais fluxos de utilização da plataforma, evidenciando como supervisores, gestores e operadores interagem indiretamente com os mecanismos inteligentes da solução.
+O diagrama representa os principais fluxos de utilização da plataforma, evidenciando como supervisores, gestores e operadores interagem com os mecanismos inteligentes da solução.
 
 ---
 
@@ -41,7 +41,11 @@ Responsável pela análise estratégica dos indicadores industriais e tomada de 
 ```mermaid
 flowchart LR
 
-subgraph Sistema["SafeVision AI"]
+Operador[🧑 Operador Industrial]
+Supervisor[👷 Supervisor de Segurança]
+Gestor[🏢 Gestor Industrial]
+
+subgraph SafeVisionAI [Sistema SafeVision AI]
 
 UC1((Monitorar Operadores))
 UC2((Detectar Uso de EPIs))
@@ -57,25 +61,21 @@ UC11((Consolidar Indicadores))
 
 end
 
-Operador["🧑 Operador Industrial"]
-Supervisor["👷 Supervisor de Segurança"]
-Gestor["🏢 Gestor Industrial"]
-
 Operador --> UC1
 
-UC1 .> UC2 : <<include>>
-UC1 .> UC3 : <<include>>
+UC1 -. "<<include>>" .-> UC2
+UC1 -. "<<include>>" .-> UC3
 
-UC2 .> UC4 : <<include>>
-UC3 .> UC4 : <<include>>
+UC2 -. "<<include>>" .-> UC4
+UC3 -. "<<include>>" .-> UC4
 
-UC4 .> UC5 : <<include>>
+UC4 -. "<<include>>" .-> UC5
 
-UC5 .> UC7 : <<include>>
+UC5 -. "<<include>>" .-> UC7
 
-UC7 .> UC6 : <<include>>
+UC7 -. "<<include>>" .-> UC6
 
-UC8 .> UC11 : <<include>>
+UC8 -. "<<include>>" .-> UC11
 
 Supervisor --> UC5
 Supervisor --> UC6
