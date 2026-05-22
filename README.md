@@ -2,7 +2,7 @@
 
 ## Sistema Inteligente de Segurança Proativa Industrial
 
-### Challenge 2026 — FIAP × SPI Integrações
+### FIAP × SPI Integrações — Challenge 2026
 
 ---
 
@@ -19,159 +19,213 @@ Professor Responsável:
 
 ---
 
-# Sobre o Projeto
+# Visão Geral do Projeto
 
-O SafeVision AI é uma solução inteligente voltada ao contexto industrial do Metaindústria, desenvolvida com foco em segurança proativa, monitoramento contínuo e prevenção de acidentes em ambientes fabris.
+O SafeVision AI é uma plataforma inteligente de monitoramento operacional industrial desenvolvida para atuar diretamente no contexto do Metaindústria, utilizando Inteligência Artificial, Visão Computacional e processamento em tempo real para prevenção proativa de acidentes industriais.
 
-A proposta utiliza Inteligência Artificial, Visão Computacional e análise em tempo real para automatizar o gerenciamento de segurança operacional, realizando o monitoramento do uso de Equipamentos de Proteção Individual (EPIs) e a identificação de riscos ergonômicos em atividades industriais.
+A solução foi concebida para transformar o modelo tradicional de segurança ocupacional, substituindo processos reativos e dependentes exclusivamente de supervisão humana por um ecossistema inteligente capaz de monitorar continuamente ambientes industriais críticos.
 
-O sistema atua diretamente no chão de fábrica, auxiliando supervisores e gestores através de alertas instantâneos, análise de conformidade e geração de dados estratégicos para tomada de decisão.
+O sistema realiza análise automatizada de fluxos de vídeo industriais para identificação de:
+
+- ausência de Equipamentos de Proteção Individual (EPIs)
+- riscos ergonômicos
+- comportamentos inseguros
+- movimentações críticas
+- padrões recorrentes de não conformidade
+- situações de risco operacional
+
+Além da identificação automática das irregularidades, a plataforma fornece alertas instantâneos, rastreabilidade histórica, dashboards operacionais e relatórios analíticos estratégicos voltados à gestão industrial.
 
 ---
 
-# Problema Abordado
+# Contextualização do Problema
 
-Ambientes industriais apresentam riscos constantes relacionados ao uso inadequado de EPIs, falhas operacionais e execução incorreta de atividades físicas repetitivas.
+No cenário industrial moderno, a Segurança e Saúde do Trabalho deixou de ser apenas uma obrigação regulatória e passou a representar um fator estratégico diretamente relacionado à produtividade, continuidade operacional e sustentabilidade corporativa.
 
-Grande parte das empresas ainda depende de fiscalização manual realizada por supervisores ou técnicos de segurança, criando limitações críticas como:
+Apesar disso, grande parte das indústrias ainda utiliza processos tradicionais de fiscalização baseados em:
 
-- ausência de monitoramento contínuo
-- cobertura limitada das áreas industriais
-- demora na identificação de irregularidades
+- inspeções manuais
+- auditorias periódicas
+- supervisão presencial limitada
+- preenchimento manual de relatórios
+- monitoramento não contínuo
+
+Esse modelo apresenta limitações severas em ambientes industriais complexos:
+
+## Limitações Operacionais
+
+- impossibilidade de monitoramento integral da planta industrial
 - falhas humanas de observação
-- ausência de rastreabilidade inteligente
-- dificuldade na prevenção de acidentes
-- aumento de afastamentos ergonômicos
-- crescimento de passivos trabalhistas
+- dificuldade de rastreamento histórico
+- demora na identificação de riscos
+- ausência de previsibilidade operacional
 
-Além disso, o modelo tradicional atua de forma reativa, respondendo apenas após a ocorrência de acidentes ou incidentes.
+## Impactos Industriais
 
-O desafio do projeto consiste em transformar esse cenário em uma cultura de segurança preventiva baseada em dados e inteligência operacional.
+- aumento de acidentes ocupacionais
+- crescimento de afastamentos ergonômicos
+- redução da produtividade
+- aumento de passivos trabalhistas
+- elevação de custos operacionais
+- comprometimento dos indicadores de SST
 
----
+Além disso, o modelo tradicional atua predominantemente de forma reativa, respondendo apenas após a ocorrência do incidente.
 
-# Proposta de Solução
-
-O SafeVision AI atua como um sistema inteligente de monitoramento operacional industrial.
-
-A solução utiliza câmeras instaladas no ambiente fabril para capturar fluxos contínuos de vídeo que são processados em tempo real através de modelos de Visão Computacional.
-
-A plataforma é capaz de:
-
-- detectar automaticamente ausência de EPIs
-- identificar riscos ergonômicos
-- reconhecer posturas inadequadas
-- monitorar movimentação em áreas críticas
-- emitir alertas instantâneos
-- registrar eventos de risco
-- gerar histórico de conformidade
-- consolidar indicadores industriais
-
-Quando uma irregularidade é detectada, o sistema realiza:
-
-1. inferência computacional
-2. validação de regras de negócio
-3. classificação do nível de risco
-4. registro da ocorrência
-5. envio de alerta operacional
-6. atualização do dashboard em tempo real
-
-A proposta promove a transição da segurança reativa para um modelo preventivo e proativo.
+O SafeVision AI propõe exatamente a ruptura desse paradigma, promovendo uma abordagem baseada em monitoramento contínuo, prevenção inteligente e tomada de decisão orientada por dados.
 
 ---
 
 # Objetivo Geral
 
-Desenvolver uma solução inteligente de monitoramento industrial capaz de automatizar o gerenciamento de EPIs e detectar riscos operacionais em tempo real através de Inteligência Artificial e Visão Computacional.
+Desenvolver uma solução inteligente de segurança industrial capaz de automatizar o monitoramento de EPIs e detectar riscos operacionais em tempo real através de Inteligência Artificial e Visão Computacional.
 
 ---
 
 # Objetivos Específicos
 
-- Automatizar o monitoramento de EPIs
-- Detectar irregularidades operacionais
-- Identificar riscos ergonômicos
-- Emitir alertas em tempo real
-- Consolidar dados históricos de conformidade
+- Automatizar o processo de fiscalização operacional
+- Detectar ausência de EPIs em tempo real
+- Identificar riscos ergonômicos durante movimentação de carga
+- Emitir alertas instantâneos para supervisores
+- Consolidar indicadores de conformidade operacional
+- Criar histórico rastreável de ocorrências
+- Apoiar tomada de decisão estratégica
 - Reduzir acidentes industriais
-- Auxiliar supervisores na tomada de decisão
-- Promover cultura de prevenção
-- Melhorar indicadores de segurança operacional
+- Melhorar indicadores de SST
+- Promover cultura de segurança preventiva
+
+---
+
+# Escopo do Projeto
+
+## Dentro do Escopo
+
+- monitoramento contínuo de EPIs
+- análise de conformidade operacional
+- detecção de postura inadequada
+- análise de movimentação industrial
+- alertas operacionais em tempo real
+- dashboard gerencial
+- relatórios analíticos
+- armazenamento histórico
+- classificação de níveis de risco
+- monitoramento por câmeras industriais
+
+## Fora do Escopo
+
+- diagnósticos médicos
+- reconhecimento facial biométrico
+- integração com folha de pagamento
+- controle de recursos humanos
+- desenvolvimento de hardware
+- monitoramento externo à planta industrial
+- alarmes sonoros industriais
+- automação física de máquinas
+
+---
+
+# Arquitetura da Solução
+
+O sistema foi estruturado utilizando arquitetura modular distribuída para garantir:
+
+- escalabilidade
+- confiabilidade
+- baixa latência
+- flexibilidade operacional
+- facilidade de manutenção
+- desacoplamento entre módulos
+
+---
+
+## Fluxo Operacional
+
+```text
+[Câmeras Industriais]
+            ↓
+[Captura Contínua de Vídeo]
+            ↓
+[Processamento Computacional]
+            ↓
+[YOLO26 + OpenCV]
+            ↓
+[Motor de Regras]
+            ↓
+[Classificação de Risco]
+            ↓
+[API de Processamento]
+            ↓
+[Banco de Dados]
+            ↓
+[Dashboard Operacional]
+            ↓
+[Supervisor Industrial]
+```
 
 ---
 
 # Tecnologias Selecionadas
 
-| Tecnologia | Finalidade |
+| Tecnologia | Aplicação |
 |---|---|
-| Python | Processamento de IA e integração |
-| YOLO26 | Detecção de objetos em tempo real |
-| OpenCV | Processamento computacional de imagem |
+| Python | Inteligência Artificial e processamento |
+| YOLO26 | Detecção de objetos industriais |
+| OpenCV | Processamento de imagem |
 | FastAPI | Comunicação entre serviços |
-| PostgreSQL | Persistência e rastreabilidade |
+| PostgreSQL | Persistência de dados |
 | React | Dashboard operacional |
-| TypeScript | Organização e escalabilidade |
-| WebSockets | Atualizações instantâneas |
+| TypeScript | Estruturação do frontend |
+| WebSockets | Atualizações em tempo real |
 
 ---
 
 # Justificativa Técnica
 
-A arquitetura tecnológica foi definida considerando os requisitos do contexto industrial do Metaindústria.
+## YOLO26
 
-## Tempo Real
+Selecionado devido à alta capacidade de inferência em tempo real, permitindo análise contínua de múltiplos elementos simultaneamente em ambientes industriais complexos.
 
-A utilização de WebSockets permite atualização imediata dos dashboards operacionais.
+## OpenCV
 
-## Escalabilidade
+Utilizado para tratamento computacional das imagens, pré-processamento visual e integração com os modelos de inferência.
 
-A separação modular dos componentes permite crescimento progressivo do sistema industrial.
+## FastAPI
 
-## Confiabilidade
+Escolhido pela alta performance, baixa latência e excelente capacidade de integração com sistemas distribuídos.
 
-O PostgreSQL garante integridade e rastreabilidade dos eventos registrados.
+## PostgreSQL
 
-## Performance
+Responsável por garantir integridade transacional, rastreabilidade histórica e confiabilidade industrial.
 
-O modelo YOLO26 oferece alta velocidade de inferência computacional.
+## React + TypeScript
 
-## Flexibilidade
+Permitem construção de dashboards modernos, escaláveis e responsivos voltados ao monitoramento operacional.
 
-A utilização de APIs desacopladas permite integração futura com novos módulos industriais.
+## WebSockets
 
-## Monitoramento Contínuo
-
-A combinação entre OpenCV e IA possibilita análise constante dos fluxos de vídeo.
+Garantem comunicação instantânea entre o backend e os dashboards industriais.
 
 ---
 
 # Funcionalidades Principais
 
-- Monitoramento contínuo de EPIs
-- Detecção postural
-- Alertas operacionais
-- Dashboard em tempo real
-- Histórico de conformidade
-- Classificação de risco
-- Gestão de eventos críticos
-- Relatórios analíticos
-- Indicadores operacionais
+- monitoramento contínuo de EPIs
+- detecção automática de irregularidades
+- análise ergonômica operacional
+- classificação inteligente de risco
+- geração de alertas críticos
+- dashboards operacionais
+- relatórios analíticos
+- rastreabilidade de conformidade
+- histórico de eventos críticos
+- consolidação de indicadores industriais
 
 ---
 
-# Estrutura Documental
+# Estrutura da Documentação
 
 ## Levantamento de Requisitos
 
 - docs/levantamento-requisitos.md
-
-## Escopo do Projeto
-
-- docs/escopo-do-projeto.md
-
-## Arquitetura da Solução
-
-- docs/arquitetura-da-solucao.md
 
 ## Personas
 
@@ -181,30 +235,64 @@ A combinação entre OpenCV e IA possibilita análise constante dos fluxos de v�
 
 - docs/regras-de-negocio.md
 
+## Arquitetura da Solução
+
+- docs/arquitetura-da-solucao.md
+
+## Fluxo Operacional
+
+- docs/fluxo-operacional.md
+
+## Análise de Riscos
+
+- docs/analise-de-riscos.md
+
 ---
 
 # Diagramas UML
 
-## Diagrama de Casos de Uso
+## Casos de Uso
 
 - docs/diagramas/casos-de-uso.md
 
-## Diagrama de Atividades
+## Atividades
 
 - docs/diagramas/atividades.md
 
-## Diagrama de Classes
+## Classes
 
 - docs/diagramas/classes.md
 
+## Arquitetura
+
+- docs/diagramas/arquitetura.md
+
+## Entidade Relacionamento
+
+- docs/diagramas/entidade-relacionamento.md
+
 ---
 
-# Modelagem do Banco de Dados
+# Resultados Esperados
 
-- database/modelagem-banco.md
+A solução busca reduzir significativamente:
+
+- acidentes operacionais
+- afastamentos ergonômicos
+- falhas de conformidade
+- tempo de resposta operacional
+- dependência exclusiva de supervisão manual
+
+Além disso, espera-se:
+
+- fortalecimento da cultura preventiva
+- aumento da produtividade
+- melhoria dos indicadores de SST
+- maior rastreabilidade industrial
+- decisões orientadas por dados
 
 ---
 
 # Status do Projeto
 
-🚧 Sprint 1 — Engenharia e documentação da solução
+🚧 Sprint 1 — Engenharia, arquitetura e modelagem documental
