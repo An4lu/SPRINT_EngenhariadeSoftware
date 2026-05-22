@@ -4,28 +4,36 @@
 flowchart TD
 
 A([Início])
-B[Capturar fluxo de vídeo]
-C[Executar inferência computacional]
-D{EPI detectado?}
 
-E[Registrar conformidade]
-F[Atualizar dashboard]
-G([Fim])
+B[Capturar fluxo contínuo de vídeo]
+C[Executar processamento computacional]
+D[Realizar inferência com YOLO26]
+E{EPI obrigatório detectado?}
 
-H[Classificar nível de risco]
-I[Registrar ocorrência]
-J[Emitir alerta operacional]
+F[Registrar conformidade]
+G[Atualizar dashboard operacional]
+
+H[Validar nível de risco]
+I[Registrar evento crítico]
+J[Gerar alerta operacional]
+K[Enviar notificação ao supervisor]
+L[Atualizar indicadores industriais]
+
+M([Fim])
 
 A --> B
 B --> C
 C --> D
+D --> E
 
-D -- Sim --> E
-E --> F
+E -- Sim --> F
 F --> G
+G --> M
 
-D -- Não --> H
+E -- Não --> H
 H --> I
 I --> J
-J --> F
+J --> K
+K --> L
+L --> G
 ```
