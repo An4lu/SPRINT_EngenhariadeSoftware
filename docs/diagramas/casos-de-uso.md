@@ -2,9 +2,17 @@
 
 # Objetivo
 
-O Diagrama de Casos de Uso representa as principais interações entre os atores industriais e o sistema SafeVision AI.
+O Diagrama de Casos de Uso representa as interações entre os atores industriais e o sistema SafeVision AI dentro do contexto operacional do Metaindústria.
 
-A modelagem foi construída considerando o contexto operacional do Metaindústria, priorizando monitoramento contínuo, prevenção de acidentes e rastreabilidade operacional.
+A modelagem foi desenvolvida com foco em:
+
+- monitoramento contínuo
+- segurança proativa
+- rastreabilidade operacional
+- prevenção de acidentes
+- resposta em tempo real
+
+O diagrama representa os principais fluxos de utilização da plataforma, evidenciando como supervisores, gestores e operadores interagem indiretamente com os mecanismos inteligentes da solução.
 
 ---
 
@@ -12,30 +20,28 @@ A modelagem foi construída considerando o contexto operacional do Metaindústri
 
 ## Operador Industrial
 
-Responsável pela execução das atividades operacionais monitoradas pelo sistema.
+Profissional monitorado pelo sistema durante execução das atividades operacionais.
 
 ---
 
 ## Supervisor de Segurança
 
-Responsável pelo acompanhamento operacional em tempo real, análise de ocorrências e resposta aos alertas críticos.
+Responsável pelo acompanhamento operacional, resposta aos alertas e análise das ocorrências críticas.
 
 ---
 
 ## Gestor Industrial
 
-Responsável pela análise estratégica dos indicadores de segurança, conformidade e desempenho operacional.
+Responsável pela análise estratégica dos indicadores industriais e tomada de decisão gerencial.
 
 ---
 
-# Diagrama UML
+# Diagrama UML — Casos de Uso
 
 ```mermaid
 flowchart LR
 
-Operador([Operador Industrial])
-Supervisor([Supervisor de Segurança])
-Gestor([Gestor Industrial])
+subgraph Sistema["SafeVision AI"]
 
 UC1((Monitorar Operadores))
 UC2((Detectar Uso de EPIs))
@@ -49,23 +55,36 @@ UC9((Gerar Relatórios))
 UC10((Exportar Relatórios))
 UC11((Consolidar Indicadores))
 
-UC1 -. include .-> UC2
-UC1 -. include .-> UC3
-UC2 -. include .-> UC4
-UC3 -. include .-> UC4
-UC4 -. include .-> UC5
-UC5 -. include .-> UC7
-UC7 -. include .-> UC8
-UC8 -. include .-> UC11
+end
 
+Operador["🧑 Operador Industrial"]
+Supervisor["👷 Supervisor de Segurança"]
+Gestor["🏢 Gestor Industrial"]
+
+Operador --> UC1
+
+UC1 .> UC2 : <<include>>
+UC1 .> UC3 : <<include>>
+
+UC2 .> UC4 : <<include>>
+UC3 .> UC4 : <<include>>
+
+UC4 .> UC5 : <<include>>
+
+UC5 .> UC7 : <<include>>
+
+UC7 .> UC6 : <<include>>
+
+UC8 .> UC11 : <<include>>
+
+Supervisor --> UC5
 Supervisor --> UC6
 Supervisor --> UC8
-Supervisor --> UC5
 
+Gestor --> UC8
 Gestor --> UC9
 Gestor --> UC10
 Gestor --> UC11
-Gestor --> UC8
 ```
 
 ---
@@ -74,14 +93,37 @@ Gestor --> UC8
 
 | Caso de Uso | Descrição |
 |---|---|
-| Monitorar Operadores | Realiza monitoramento contínuo dos operadores industriais |
+| Monitorar Operadores | Realiza monitoramento contínuo do ambiente industrial |
 | Detectar Uso de EPIs | Identifica conformidade dos EPIs obrigatórios |
-| Detectar Desvio Postural | Analisa postura e movimentação operacional |
-| Classificar Nível de Risco | Determina criticidade da ocorrência |
-| Emitir Alertas | Gera notificações operacionais em tempo real |
-| Atualizar Dashboard | Atualiza indicadores operacionais |
-| Registrar Ocorrências | Armazena eventos críticos |
-| Consultar Histórico | Permite rastreamento operacional |
-| Gerar Relatórios | Consolida relatórios analíticos |
-| Exportar Relatórios | Exporta dados gerenciais |
-| Consolidar Indicadores | Agrupa métricas operacionais |
+| Detectar Desvio Postural | Analisa riscos ergonômicos e postura inadequada |
+| Classificar Nível de Risco | Determina criticidade operacional da ocorrência |
+| Emitir Alertas | Gera notificações em tempo real |
+| Atualizar Dashboard | Atualiza indicadores operacionais instantaneamente |
+| Registrar Ocorrências | Armazena eventos críticos detectados |
+| Consultar Histórico | Permite rastreamento operacional histórico |
+| Gerar Relatórios | Consolida dados analíticos industriais |
+| Exportar Relatórios | Permite extração de relatórios gerenciais |
+| Consolidar Indicadores | Agrupa métricas operacionais e estratégicas |
+
+---
+
+# Relacionamentos UML Utilizados
+
+## <<include>>
+
+Representa funcionalidades obrigatoriamente executadas dentro de outro caso de uso.
+
+Exemplo:
+
+- Detectar Uso de EPIs inclui Classificar Nível de Risco.
+
+---
+
+# Fluxo Geral Representado
+
+1. O ambiente industrial é monitorado continuamente.
+2. O sistema identifica EPIs e comportamento operacional.
+3. O risco é classificado automaticamente.
+4. Eventos críticos geram alertas operacionais.
+5. As informações atualizam dashboards e históricos.
+6. Gestores utilizam os dados para análise estratégica.
