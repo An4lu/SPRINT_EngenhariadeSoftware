@@ -13,103 +13,105 @@ A modelagem foi segmentada por responsabilidade operacional, permitindo identifi
 
 ---
 
-# Diagrama UML — Casos de Uso
+# Diagrama de Casos de Uso — Operador Industrial
 
 ```mermaid
 flowchart LR
 
-%% ATORES
-
 Operador[Operador Industrial]
-Supervisor[Supervisor de Seguranca]
-Gestor[Gestor Industrial]
-
-%% SISTEMA
 
 subgraph SafeVisionAI [Sistema SafeVision AI]
-
-%% OPERADOR
 
 UC1((Ser Monitorado))
 UC2((Utilizar EPIs Obrigatorios))
 UC3((Executar Atividade Operacional))
-
-%% SUPERVISOR
-
-UC4((Receber Alertas))
-UC5((Monitorar Dashboard))
-UC6((Consultar Ocorrencias))
-UC7((Analisar Eventos Criticos))
-UC8((Validar Conformidade Operacional))
-
-%% GESTOR
-
-UC9((Visualizar Indicadores))
-UC10((Gerar Relatorios))
-UC11((Exportar Relatorios))
-UC12((Analisar Desempenho de SST))
-UC13((Acompanhar Historico Industrial))
-
-%% SISTEMA
-
-UC14((Detectar Uso de EPIs))
-UC15((Detectar Desvio Postural))
-UC16((Classificar Nivel de Risco))
-UC17((Registrar Eventos))
-UC18((Atualizar Dashboard))
-UC19((Armazenar Historico))
-UC20((Emitir Alertas em Tempo Real))
+UC4((Detectar Uso de EPIs))
+UC5((Detectar Desvio Postural))
+UC6((Classificar Nivel de Risco))
 
 end
-
-%% RELACIONAMENTOS OPERADOR
 
 Operador --> UC1
 Operador --> UC2
 Operador --> UC3
 
-%% RELACIONAMENTOS SUPERVISOR
+UC1 -.-> UC4
+UC2 -.-> UC4
+UC3 -.-> UC5
 
+UC4 -.-> UC6
+UC5 -.-> UC6
+```
+
+---
+
+# Diagrama de Casos de Uso — Supervisor de Segurança
+
+```mermaid
+flowchart LR
+
+Supervisor[Supervisor de Seguranca]
+
+subgraph SafeVisionAI [Sistema SafeVision AI]
+
+UC1((Receber Alertas))
+UC2((Monitorar Dashboard))
+UC3((Consultar Ocorrencias))
+UC4((Analisar Eventos Criticos))
+UC5((Validar Conformidade))
+UC6((Emitir Alertas em Tempo Real))
+UC7((Atualizar Dashboard))
+UC8((Registrar Eventos))
+UC9((Armazenar Historico))
+
+end
+
+Supervisor --> UC1
+Supervisor --> UC2
+Supervisor --> UC3
 Supervisor --> UC4
 Supervisor --> UC5
-Supervisor --> UC6
-Supervisor --> UC7
-Supervisor --> UC8
 
-%% RELACIONAMENTOS GESTOR
+UC6 -.-> UC1
+UC7 -.-> UC2
+UC8 -.-> UC3
+UC8 -.-> UC4
+UC9 -.-> UC5
+```
 
-Gestor --> UC9
-Gestor --> UC10
-Gestor --> UC11
-Gestor --> UC12
-Gestor --> UC13
+---
 
-%% FLUXOS INTERNOS
+# Diagrama de Casos de Uso — Gestor Industrial
 
-UC1 -.-> UC14
-UC2 -.-> UC14
+```mermaid
+flowchart LR
 
-UC3 -.-> UC15
+Gestor[Gestor Industrial]
 
-UC14 -.-> UC16
-UC15 -.-> UC16
+subgraph SafeVisionAI [Sistema SafeVision AI]
 
-UC16 -.-> UC17
-UC17 -.-> UC18
-UC17 -.-> UC19
-UC16 -.-> UC20
+UC1((Visualizar Indicadores))
+UC2((Gerar Relatorios))
+UC3((Exportar Relatorios))
+UC4((Analisar Desempenho SST))
+UC5((Acompanhar Historico))
+UC6((Consolidar Indicadores))
+UC7((Armazenar Historico))
+UC8((Registrar Eventos))
 
-UC20 -.-> UC4
-UC18 -.-> UC5
+end
 
-UC19 -.-> UC6
-UC19 -.-> UC13
+Gestor --> UC1
+Gestor --> UC2
+Gestor --> UC3
+Gestor --> UC4
+Gestor --> UC5
 
-UC17 -.-> UC10
-UC10 -.-> UC11
-
-UC18 -.-> UC9
-UC9 -.-> UC12
+UC6 -.-> UC1
+UC8 -.-> UC2
+UC2 -.-> UC3
+UC1 -.-> UC4
+UC7 -.-> UC5
 ```
 
 ---
