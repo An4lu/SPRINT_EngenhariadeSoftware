@@ -2,7 +2,7 @@
 
 ## Sistema Inteligente de Segurança Proativa Industrial
 
-### FIAP × SPI Integrações — Challenge 2026
+### Challenge 2026 — FIAP × SPI Integrações
 
 ---
 
