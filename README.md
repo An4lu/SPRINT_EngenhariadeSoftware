@@ -1,431 +1,505 @@
 # SafeVision AI
 
-## Sistema Inteligente de Segurança Proativa Industrial
+### Plataforma Inteligente de Segurança Proativa Industrial
+**Challenge 2026 — FIAP × SPI Integrações | Engenharia de Software**
 
-### Challenge 2026 — FIAP × SPI Integrações
-
----
-
-# Integrantes
-
-* Ana Luiza Oliveira Dourado — RM558793
-* Carlos Augusto da Cruz Possi — RM558758
-* Fabio Henrique Santos Faria — RM552453
-* João Pedro Bernardes Santos da Silva — RM557142
-* Leonardo Tanaka Cortez — RM556781
-
-Professor Responsável:
-
-* Hercules Lima Ramos
+> Sistema voltado ao contexto da **Metaindústria**, utilizando Inteligência Artificial e Visão Computacional para apoiar o monitoramento de segurança, identificação de não conformidades relacionadas a EPIs, geração de alertas, rastreabilidade de ocorrências e análise de indicadores operacionais.
 
 ---
 
-# Visão Geral do Projeto
+##  Equipe — SecurIT
 
-O SafeVision AI é uma plataforma inteligente de monitoramento operacional industrial desenvolvida para atuar diretamente no contexto do Metaindústria, utilizando Inteligência Artificial, Visão Computacional e processamento em tempo real para prevenção proativa de acidentes industriais.
+| Integrante | RM |
+|---|---|
+| Ana Luiza Oliveira Dourado | RM558793 |
+| Carlos Augusto da Cruz Possi | RM558758 |
+| Fabio Henrique Santos Faria | RM552453 |
+| João Pedro Bernardes Santos da Silva | RM557142 |
+| Leonardo Tanaka Cortez | RM556781 |
 
-A solução foi concebida para transformar o modelo tradicional de segurança ocupacional, substituindo processos reativos e dependentes exclusivamente de supervisão humana por um ecossistema inteligente capaz de monitorar continuamente ambientes industriais críticos.
-
-O sistema realiza análise automatizada de fluxos de vídeo industriais para identificação de:
-
-* ausência de Equipamentos de Proteção Individual (EPIs)
-* riscos ergonômicos
-* comportamentos inseguros
-* movimentações críticas
-* padrões recorrentes de não conformidade
-* situações de risco operacional
-
-Além da identificação automática das irregularidades, a plataforma fornece alertas instantâneos, rastreabilidade histórica, dashboards operacionais e relatórios analíticos estratégicos voltados à gestão industrial.
-
----
-
-# Sprint 2 — Prototipação Funcional e Navegável
-
-Durante a Sprint 2 foi desenvolvido um protótipo navegável de alta fidelidade do SafeVision AI com o objetivo de validar os fluxos operacionais modelados na Sprint 1 e simular a experiência real dos usuários da plataforma.
-
-O projeto evoluiu da documentação e modelagem para uma representação visual funcional da solução, permitindo a validação dos fluxos de negócio e da experiência do usuário.
+**Curso:** Engenharia da Computação — FIAP  
+**Disciplina:** Engenharia de Software  
+**Professor:** Hercules Lima Ramos  
+**Sprint:** 3 — Entrega final  
+**Data de consolidação:** 17/09/2026
 
 ---
 
-## MVP Desenvolvido
+# Acesso rápido
 
-Foi desenvolvido um MVP funcional em código para demonstrar a viabilidade técnica da solução e validar os principais fluxos da plataforma.
+| Artefato | Link |
+|---|---|
+| 💻 Repositório principal | https://github.com/An4lu/SPRINT_EngenhariadeSoftware/tree/main |
+| 🚀 Repositório do MVP | https://github.com/An4lu/SPRINT-2---Engenharia-de-Software---MVP |
+| 🌐 MVP publicado | https://sprint-2-engenharia-de-software-mvp.vercel.app/ |
+| 🎨 Protótipo no Figma | https://www.figma.com/design/T2jxOiZXGaYVfIhwDWxHow/Untitled?node-id=0-1&t=P6XGKeJassPzaVH9-1 |
+| 📋 Board Scrum no Trello | https://trello.com/invite/b/6aac1cecb319ca9d264a4c5c/ATTI94a07ec8bc406fdfd9dd236a8e21a302901D4E56/securit |
+| 📄 Documento acadêmico | `docs/sprint-3/SafeVision_AI_Sprint3_Documento_Final.docx` |
 
-🔗 MVP:
-
-https://sprint-2-engenharia-de-software-mvp.vercel.app/
-
----
-
-## Protótipo Navegável (Figma)
-
-Protótipo de alta fidelidade contendo as principais telas da aplicação e os fluxos operacionais definidos na Sprint 1.
-
-🔗 Figma:
-
-https://www.figma.com/design/T2jxOiZXGaYVfIhwDWxHow/Untitled?node-id=0-1&t=jGSRvchUXf67OWD6-1
+> **Importante:** o protótipo permaneceu no mesmo arquivo do Figma durante a Sprint 3. A evolução ocorreu de maneira incremental, mantendo o histórico e a rastreabilidade do projeto.
 
 ---
 
-## Vídeo de Apresentação
+# 📌 Sobre o projeto
 
-Demonstração dos fluxos principais do sistema e da aplicação da solução no contexto do desafio Metaindústria.
+Ambientes industriais exigem acompanhamento constante das condições de segurança. A conferência exclusivamente manual de EPIs e situações de risco pode dificultar a identificação imediata de não conformidades, especialmente em ambientes com múltiplas câmeras, setores e eventos simultâneos.
 
-🎥 Vídeo:
+O **SafeVision AI** foi concebido como uma plataforma de apoio à segurança industrial. A solução propõe integrar câmeras de monitoramento, processamento de imagens, Inteligência Artificial, regras de negócio e uma interface centralizada para transformar imagens do ambiente em informações operacionais.
 
-https://youtu.be/FAV2OXlJuUw
-
----
-
-# Contextualização do Problema
-
-No cenário industrial moderno, a Segurança e Saúde do Trabalho deixou de ser apenas uma obrigação regulatória e passou a representar um fator estratégico diretamente relacionado à produtividade, continuidade operacional e sustentabilidade corporativa.
-
-Apesar disso, grande parte das indústrias ainda utiliza processos tradicionais de fiscalização baseados em:
-
-* inspeções manuais
-* auditorias periódicas
-* supervisão presencial limitada
-* preenchimento manual de relatórios
-* monitoramento não contínuo
-
-Esse modelo apresenta limitações severas em ambientes industriais complexos.
-
-## Limitações Operacionais
-
-* impossibilidade de monitoramento integral da planta industrial
-* falhas humanas de observação
-* dificuldade de rastreamento histórico
-* demora na identificação de riscos
-* ausência de previsibilidade operacional
-
-## Impactos Industriais
-
-* aumento de acidentes ocupacionais
-* crescimento de afastamentos ergonômicos
-* redução da produtividade
-* aumento de passivos trabalhistas
-* elevação de custos operacionais
-* comprometimento dos indicadores de SST
-
-O SafeVision AI propõe uma abordagem baseada em monitoramento contínuo, prevenção inteligente e tomada de decisão orientada por dados.
-
----
-
-# Objetivo Geral
-
-Desenvolver uma solução inteligente de segurança industrial capaz de automatizar o monitoramento de EPIs e detectar riscos operacionais em tempo real através de Inteligência Artificial e Visão Computacional.
-
----
-
-# Objetivos Específicos
-
-* Automatizar o processo de fiscalização operacional
-* Detectar ausência de EPIs em tempo real
-* Identificar riscos ergonômicos durante movimentação de carga
-* Emitir alertas instantâneos para supervisores
-* Consolidar indicadores de conformidade operacional
-* Criar histórico rastreável de ocorrências
-* Apoiar tomada de decisão estratégica
-* Reduzir acidentes industriais
-* Melhorar indicadores de SST
-* Promover cultura de segurança preventiva
-
----
-
-# Escopo do Projeto
-
-## Dentro do Escopo
-
-* monitoramento contínuo de EPIs
-* análise de conformidade operacional
-* detecção de postura inadequada
-* análise de movimentação industrial
-* alertas operacionais em tempo real
-* dashboard gerencial
-* relatórios analíticos
-* armazenamento histórico
-* classificação de níveis de risco
-* monitoramento por câmeras industriais
-
-## Fora do Escopo
-
-* diagnósticos médicos
-* reconhecimento facial biométrico
-* integração com folha de pagamento
-* controle de recursos humanos
-* desenvolvimento de hardware
-* monitoramento externo à planta industrial
-* alarmes sonoros industriais
-* automação física de máquinas
-
----
-
-# Fluxos Implementados no Protótipo
-
-## Dashboard de Monitoramento
-
-Permite ao supervisor acompanhar:
-
-* indicadores de segurança
-* alertas ativos
-* status operacional
-* conformidade dos colaboradores
-* métricas em tempo real
-
-## Gestão de EPIs
-
-Fluxo completo de:
-
-* cadastro de colaborador
-* consulta de EPIs
-* vinculação de equipamentos
-* atualização de registros
-* acompanhamento de conformidade
-
-## Alertas e Notificações
-
-Permite:
-
-* visualização de alertas críticos
-* histórico de ocorrências
-* classificação por criticidade
-* acompanhamento de riscos operacionais
-
-## Relatórios de Conformidade
-
-Permite:
-
-* geração de relatórios por setor
-* análise de conformidade
-* histórico de ocorrências
-* indicadores de desempenho em SST
-
----
-
-# Decisões de UX/UI
-
-O design foi desenvolvido considerando o ambiente industrial e as personas identificadas na Sprint 1.
-
-## Princípios de Design
-
-### Leitura Rápida
-
-* uso de dashboards visuais
-* indicadores destacados
-* alertas coloridos por criticidade
-* informações priorizadas por importância
-
-### Navegação Simplificada
-
-Menu lateral persistente com acesso rápido aos módulos:
-
-* Dashboard
-* EPIs
-* Alertas
-* Relatórios
-* Configurações
-
-### Hierarquia Visual
-
-* destaque para eventos críticos
-* gráficos operacionais
-* métricas de conformidade
-* acompanhamento em tempo real
-
-### Contexto Industrial
-
-A interface foi pensada para:
-
-* supervisores industriais
-* acompanhamento contínuo
-* leitura rápida
-* tomada de decisão operacional
-
----
-
-# Mapeamento entre Casos de Uso e Telas
-
-| Caso de Uso           | Tela           |
-| --------------------- | -------------- |
-| Consultar Dashboard   | Dashboard      |
-| Monitorar Indicadores | Dashboard      |
-| Gerenciar EPIs        | Gestão de EPIs |
-| Consultar Colaborador | Gestão de EPIs |
-| Receber Alertas       | Alertas        |
-| Consultar Ocorrências | Alertas        |
-| Gerar Relatórios      | Relatórios     |
-| Consultar Histórico   | Relatórios     |
-
----
-
-# Navegação do Protótipo
-
-Fluxo recomendado:
-
-1. Dashboard
-2. Gestão de EPIs
-3. Consulta de colaboradores
-4. Alertas
-5. Ocorrências registradas
-6. Relatórios
-7. Geração de relatório
-8. Retorno ao Dashboard
-
----
-
-# Arquitetura da Solução
-
-## Fluxo Operacional
+A proposta não se limita à detecção. O sistema organiza o ciclo completo da informação:
 
 ```text
-[Câmeras Industriais]
-            ↓
-[Captura Contínua de Vídeo]
-            ↓
-[Processamento Computacional]
-            ↓
-[YOLO26 + OpenCV]
-            ↓
-[Motor de Regras]
-            ↓
-[Classificação de Risco]
-            ↓
-[API de Processamento]
-            ↓
-[Banco de Dados]
-            ↓
-[Dashboard Operacional]
-            ↓
-[Supervisor Industrial]
+Captura → Detecção → Interpretação → Classificação → Alerta
+        → Evidência → Histórico → Indicadores → Auditoria
+```
+
+Dessa forma, o SafeVision AI fornece uma visão integrada das ocorrências e permite que usuários autorizados acompanhem o ambiente, consultem evidências, analisem indicadores e gerenciem recursos relacionados ao monitoramento.
+
+---
+
+# Objetivos
+
+## Objetivo geral
+
+Desenvolver uma solução capaz de utilizar Visão Computacional e uma plataforma web para apoiar a identificação, registro e acompanhamento de situações relacionadas à segurança em ambientes industriais.
+
+## Objetivos específicos
+
+- apoiar a identificação de ausência ou uso inadequado de EPIs;
+- centralizar informações provenientes do monitoramento;
+- classificar eventos de acordo com sua relevância e criticidade;
+- disponibilizar alertas para acompanhamento operacional;
+- armazenar ocorrências e evidências para consulta posterior;
+- fornecer indicadores de segurança em dashboard;
+- permitir análise histórica e auditoria;
+- representar e acompanhar as câmeras utilizadas no monitoramento;
+- controlar usuários e níveis de acesso;
+- estruturar uma arquitetura preparada para comunicação em tempo real;
+- manter rastreabilidade entre requisitos, protótipo, desenvolvimento e gestão Scrum.
+
+---
+
+# Principais módulos
+
+## Monitoramento
+
+Área operacional destinada à visualização das câmeras e das informações produzidas pelo processamento das imagens.
+
+O módulo representa o ponto central de acompanhamento do ambiente e se relaciona diretamente com detecções, alertas e ocorrências.
+
+## Central de Alertas
+
+Concentra eventos identificados pelo sistema e facilita a visualização de situações que demandam atenção.
+
+Os refinamentos realizados buscaram destacar criticidade, contexto e hierarquia das informações.
+
+## Dashboard Executivo
+
+Apresenta uma visão consolidada dos principais indicadores do sistema, permitindo acompanhar tendências, ocorrências e informações relevantes de SST.
+
+## Histórico e Evidências
+
+Mantém a rastreabilidade das ocorrências identificadas e de suas respectivas evidências, apoiando investigação posterior e auditoria.
+
+## Relatórios e Auditoria
+
+Organiza informações históricas e indicadores para análise das ocorrências registradas pelo SafeVision AI.
+
+## Inventário de Câmeras
+
+Representa os dispositivos responsáveis pela captura das imagens e seus estados operacionais.
+
+Esse fluxo amplia a solução para além da detecção, incluindo a gestão da infraestrutura necessária ao monitoramento.
+
+## Gestão de Usuários e Permissões
+
+Representa o controle administrativo da plataforma e a separação de responsabilidades entre diferentes perfis de acesso.
+
+---
+
+# Fluxo funcional
+
+```mermaid
+flowchart LR
+    A[Câmeras] --> B[Captura de vídeo]
+    B --> C[OpenCV / YOLO]
+    C --> D[Detecções]
+    D --> E[Motor de regras]
+    E --> F[Classificação de risco]
+    F --> G[Ocorrência]
+    G --> H[Central de Alertas]
+    G --> I[Histórico e Evidências]
+    G --> J[Dashboard]
+    I --> K[Relatórios e Auditoria]
+```
+
+O processamento das imagens gera detecções que são interpretadas pelo motor de regras. A partir dessas informações, a aplicação pode estruturar ocorrências e disponibilizá-las aos diferentes módulos.
+
+---
+
+# Arquitetura técnica
+
+A arquitetura foi refinada ao longo das Sprints para separar responsabilidades e facilitar a compreensão do fluxo da solução.
+
+```text
+┌─────────────────────────────┐
+│     Câmeras Industriais     │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│      Captura de Vídeo       │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│      OpenCV + YOLO          │
+│   Visão Computacional       │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│       Motor de Regras       │
+│ Interpretação das detecções │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│   Classificação de Risco    │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│          FastAPI            │
+│     Serviços / Backend      │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│         PostgreSQL          │
+│ Persistência e histórico    │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│ REST API + WebSockets       │
+└──────────────┬──────────────┘
+               ↓
+┌─────────────────────────────┐
+│     React + TypeScript      │
+│     Interface Web           │
+└─────────────────────────────┘
+```
+
+### Camadas
+
+**Visão Computacional** — responsável pela aquisição e análise dos frames, utilizando OpenCV e YOLO.
+
+**Motor de Regras** — interpreta as detecções e transforma resultados técnicos em eventos compreensíveis pela aplicação.
+
+**Backend / API** — centraliza serviços, regras da aplicação, consultas e integração entre os módulos.
+
+**Persistência** — armazena informações necessárias para histórico, usuários, câmeras, eventos, evidências e auditoria.
+
+**Comunicação em tempo real** — WebSockets representam o mecanismo para propagação dinâmica de eventos e alertas.
+
+**Frontend** — disponibiliza monitoramento, dashboard, alertas, histórico, relatórios e recursos administrativos.
+
+---
+
+# Tecnologias e ferramentas
+
+| Tecnologia | Utilização |
+|---|---|
+| Python | Processamento e serviços relacionados à IA |
+| YOLO | Detecção de objetos |
+| OpenCV | Captura e processamento de imagens |
+| FastAPI | API e serviços backend |
+| PostgreSQL | Persistência de dados |
+| React | Construção da interface |
+| TypeScript | Desenvolvimento frontend tipado |
+| WebSockets | Comunicação e atualizações em tempo real |
+| Figma | Prototipação de alta fidelidade |
+| Trello | Gestão Scrum e rastreabilidade das atividades |
+| GitHub | Versionamento e documentação |
+| Vercel | Publicação do MVP |
+
+---
+
+# UX/UI e protótipo
+
+O protótipo de alta fidelidade está disponível no Figma:
+
+**🔗 https://www.figma.com/design/T2jxOiZXGaYVfIhwDWxHow/Untitled?node-id=0-1&t=P6XGKeJassPzaVH9-1**
+
+A evolução da Sprint 3 foi realizada no próprio arquivo já utilizado pelo grupo. Em vez de criar uma nova versão separada, foram consolidados fluxos e aplicados refinamentos de usabilidade.
+
+## Evoluções consolidadas
+
+### 1. Inventário de Câmeras e Status
+
+A solução passou a representar de maneira mais clara a infraestrutura de câmeras.
+
+**Motivação:** o monitoramento depende diretamente da disponibilidade dos dispositivos. A visão administrativa facilita a identificação de câmeras e possíveis indisponibilidades.
+
+### 2. Gestão de Usuários e Permissões
+
+O fluxo administrativo foi consolidado para representar diferentes perfis e níveis de acesso.
+
+**Motivação:** informações operacionais e administrativas precisam respeitar diferentes responsabilidades dentro da plataforma.
+
+### 3. Histórico e Evidências
+
+O fluxo foi refinado para favorecer rastreabilidade, consulta posterior e auditoria das ocorrências.
+
+### 4. Dashboard, Alertas e Relatórios
+
+Foram revisadas hierarquia visual, organização das informações e leitura de indicadores.
+
+---
+
+# Visita técnica e validação — 11/08/2026
+
+A visita técnica foi utilizada como momento de observação e teste da solução em contexto mais próximo ao ambiente de aplicação.
+
+Durante os testes foram percebidas oportunidades de melhoria relacionadas principalmente a:
+
+- orientação das telas;
+- rotação das telas;
+- disposição dos componentes;
+- legibilidade em diferentes posicionamentos;
+- visualização rápida das informações operacionais.
+
+Após a visita, foram realizados ajustes pontuais mantendo a identidade visual e a estrutura principal do protótipo.
+
+Esse processo foi importante para relacionar decisões de interface com condições reais de visualização, transformando observações da validação em refinamentos do produto.
+
+---
+
+# Metodologia Scrum — Sprint 3
+
+O desenvolvimento e a consolidação da Sprint 3 foram organizados utilizando Scrum.
+
+** Board:** https://trello.com/invite/b/6aac1cecb319ca9d264a4c5c/ATTI94a07ec8bc406fdfd9dd236a8e21a302901D4E56/securit
+
+## Estrutura do board
+
+```text
+Product Backlog
+      ↓
+Sprint Backlog
+      ↓
+Em andamento
+      ↓
+Em revisão
+      ↓
+Concluído
+```
+
+Os cards registram atividades relacionadas a desenvolvimento, UX, testes, arquitetura, documentação e cerimônias.
+
+---
+
+# Product Backlog
+
+| ID | Prioridade | Funcionalidade |
+|---|---|---|
+| PB01 | P0 | Monitoramento em tempo real |
+| PB02 | P0 | Detecção de ausência de EPI |
+| PB03 | P0 | Classificação de riscos |
+| PB04 | P0 | Central de alertas |
+| PB05 | P0 | Dashboard executivo |
+| PB06 | P1 | Histórico e evidências |
+| PB07 | P1 | Relatórios e auditoria |
+| PB08 | P1 | Inventário de câmeras |
+| PB09 | P1 | Gestão de usuários e permissões |
+| PB10 | P1 | Filtros operacionais |
+| PB11 | P2 | Notificações em tempo real |
+| PB12 | P2 | Exportação de relatórios |
+| PB13 | P2 | Auditoria de ações |
+| PB14 | P2 | Indicadores históricos |
+| PB15 | P3 | Configurações administrativas avançadas |
+
+**P0:** essencial ao núcleo da solução  
+**P1:** alta importância para operação e administração  
+**P2:** evolução funcional relevante  
+**P3:** evolução complementar
+
+---
+
+# Sprint Backlog — Sprint 3
+
+A Sprint 3 contemplou atividades agrupadas em seis frentes:
+
+| Frente | Principais atividades |
+|---|---|
+| Desenvolvimento | monitoramento, dashboard, alertas, histórico, câmeras e usuários |
+| UX/UI | refinamentos visuais, navegação, orientação e rotação |
+| Testes | preparação, visita técnica e validação |
+| Arquitetura | pipeline de IA, regras, API, persistência e comunicação |
+| Scrum | backlog, DoD, Planning, Dailies e Review |
+| Documentação | README, documento acadêmico e evidências |
+
+O detalhamento completo, com responsáveis, critérios de aceite e status, encontra-se no Trello.
+
+---
+
+# Definition of Done — DoD
+
+Uma atividade foi considerada concluída quando:
+
+- os critérios de aceite foram atendidos;
+- o resultado estava coerente com o contexto do SafeVision AI;
+- a atividade passou por revisão quando aplicável;
+- a consistência visual ou funcional foi verificada;
+- alterações relevantes foram documentadas;
+- o responsável estava identificado;
+- o status foi atualizado no Trello;
+- evidências ou resultados foram armazenados;
+- o item estava apto para apresentação.
+
+---
+
+# Cerimônias e acompanhamento
+
+| Data | Registro |
+|---|---|
+| 15/07/2026 | Sprint Planning |
+| 22/07/2026 | Daily assíncrona — revisão e levantamento de melhorias |
+| 05/08/2026 | Daily assíncrona — preparação para validação |
+| 11/08/2026 | Visita técnica, testes e acompanhamento |
+| 25/08/2026 | Daily assíncrona — revisão dos ajustes e documentação |
+| 17/09/2026 | Sprint Review e consolidação da entrega |
+
+O conteúdo detalhado das cerimônias está disponível em:
+
+`docs/sprint-3/SafeVision_AI_Sprint3_Documento_Final.docx`
+
+---
+
+# Mapeamento de funcionalidades
+
+| Necessidade | Módulo |
+|---|---|
+| Acompanhar ambiente industrial | Monitoramento |
+| Identificar situações relacionadas a EPI | Visão Computacional |
+| Priorizar ocorrências | Classificação de Risco |
+| Visualizar eventos relevantes | Central de Alertas |
+| Consultar indicadores | Dashboard Executivo |
+| Investigar eventos anteriores | Histórico e Evidências |
+| Apoiar auditoria | Relatórios e Auditoria |
+| Administrar dispositivos | Inventário de Câmeras |
+| Administrar acessos | Gestão de Usuários e Permissões |
+
+---
+
+# Organização da documentação
+
+```text
+SPRINT_EngenhariadeSoftware/
+│
+├── README.md
+├── database/
+│
+└── docs/
+    ├── sprint-3/
+    │   ├── SafeVision_AI_Sprint3_Documento_Final.docx
+    │   ├── evidencias-trello/
+    │   ├── evidencias-figma/
+    │   └── evidencias-visita-tecnica/
+    │
+    ├── levantamento-requisitos.md
+    ├── personas.md
+    ├── regras-de-negocio.md
+    ├── arquitetura-da-solucao.md
+    └── diagramas/
 ```
 
 ---
 
-# Tecnologias Selecionadas
+# Entregáveis
 
-| Tecnologia | Aplicação                 |
-| ---------- | ------------------------- |
-| Python     | Inteligência Artificial   |
-| YOLO26     | Detecção de objetos       |
-| OpenCV     | Processamento de imagem   |
-| FastAPI    | Backend                   |
-| PostgreSQL | Banco de dados            |
-| React      | Frontend                  |
-| TypeScript | Estruturação da aplicação |
-| WebSockets | Comunicação em tempo real |
+### Sprint 1
+- levantamento e análise de requisitos;
+- personas e contexto de uso;
+- regras de negócio;
+- modelagem e arquitetura inicial.
 
----
+### Sprint 2
+- evolução do produto;
+- protótipo de alta fidelidade;
+- MVP;
+- validação dos principais fluxos.
 
-# Funcionalidades Principais
-
-* monitoramento contínuo de EPIs
-* detecção automática de irregularidades
-* análise ergonômica operacional
-* classificação inteligente de risco
-* geração de alertas críticos
-* dashboards operacionais
-* relatórios analíticos
-* rastreabilidade de conformidade
-* histórico de eventos críticos
-* consolidação de indicadores industriais
-
----
-
-# Estrutura da Documentação
-
-## Levantamento de Requisitos
-
-* docs/levantamento-requisitos.md
-
-## Personas
-
-* docs/personas.md
-
-## Regras de Negócio
-
-* docs/regras-de-negocio.md
-
-## Arquitetura da Solução
-
-* docs/arquitetura-da-solucao.md
-
-## Fluxo Operacional
-
-* docs/fluxo-operacional.md
-
-## Análise de Riscos
-
-* docs/analise-de-riscos.md
+### Sprint 3
+- refinamentos do protótipo;
+- novos fluxos administrativos;
+- testes e visita técnica;
+- Product Backlog;
+- Sprint Backlog;
+- Definition of Done;
+- board Scrum;
+- Planning;
+- Dailies;
+- Review;
+- arquitetura refinada;
+- documentação final.
 
 ---
 
-# Diagramas UML
+# Documentação e evidências
 
-## Casos de Uso
+Para facilitar a rastreabilidade da entrega, os artefatos ficam centralizados entre GitHub, Figma e Trello:
 
-* docs/diagramas/casos-de-uso.md
+### Código e documentação
+**https://github.com/An4lu/SPRINT_EngenhariadeSoftware/tree/main**
 
-## Atividades
+### MVP — repositório
+**https://github.com/An4lu/SPRINT-2---Engenharia-de-Software---MVP**
 
-* docs/diagramas/atividades.md
+### MVP — aplicação
+**https://sprint-2-engenharia-de-software-mvp.vercel.app/**
 
-## Classes
+### Protótipo
+**https://www.figma.com/design/T2jxOiZXGaYVfIhwDWxHow/Untitled?node-id=0-1&t=P6XGKeJassPzaVH9-1**
 
-* docs/diagramas/classes.md
-
-## Arquitetura
-
-* docs/diagramas/arquitetura.md
-
-## Entidade Relacionamento
-
-* docs/diagramas/entidade-relacionamento.md
+### Gestão Scrum
+**https://trello.com/invite/b/6aac1cecb319ca9d264a4c5c/ATTI94a07ec8bc406fdfd9dd236a8e21a302901D4E56/securit**
 
 ---
 
-# Evidências da Sprint 2
+# Possíveis evoluções futuras
 
-Entregáveis produzidos:
+Embora o escopo acadêmico tenha sido concluído, a arquitetura permite evoluções como:
 
-* protótipo navegável no Figma
-* MVP funcional em código
-* vídeo de apresentação
-* documentação UX/UI
-* mapeamento de casos de uso
-* validação dos fluxos da Sprint 1
-* simulação da experiência do usuário
-
----
-
-# Resultados Esperados
-
-* redução de acidentes operacionais
-* redução de afastamentos ergonômicos
-* melhoria dos indicadores de SST
-* fortalecimento da cultura preventiva
-* aumento da produtividade
-* maior rastreabilidade industrial
-* tomada de decisão orientada por dados
+- integração mais profunda com fontes de vídeo em tempo real;
+- ampliação das classes detectadas pelo modelo;
+- calibração de regras por setor;
+- dashboards históricos mais avançados;
+- notificações externas;
+- trilhas de auditoria mais detalhadas;
+- métricas de desempenho do modelo;
+- gestão avançada de dispositivos;
+- integração com outros sistemas industriais;
+- testes automatizados e observabilidade.
 
 ---
 
-# Status do Projeto
+# Status final
 
-✅ Sprint 1 — Engenharia, arquitetura e modelagem documental concluída
+| Etapa | Status |
+|---|---|
+| Sprint 1 — Engenharia e requisitos | ✅ Concluída |
+| Sprint 2 — Protótipo e MVP | ✅ Concluída |
+| Sprint 3 — Scrum, validação e consolidação | ✅ Concluída |
+| Visita técnica / testes | ✅ Realizada |
+| Documentação final | ✅ Concluída |
+| Projeto acadêmico | ✅ Finalizado |
 
-✅ Sprint 2 — Prototipação funcional e navegável concluída
+---
 
-### Entregáveis concluídos
+## Conclusão
 
-* documentação de requisitos
-* regras de negócio
-* personas
-* arquitetura da solução
-* diagramas UML
-* protótipo navegável
-* MVP funcional
-* vídeo demonstrativo
-* documentação UX/UI
+O SafeVision AI evoluiu de uma proposta de monitoramento inteligente para uma solução estruturada que conecta **Visão Computacional, regras de negócio, gestão de ocorrências, experiência do usuário e rastreabilidade do desenvolvimento**.
 
-🚀 Próxima etapa: evolução da implementação técnica da solução e validação dos componentes de Inteligência Artificial.
+Ao longo das Sprints, o grupo trabalhou requisitos, prototipação, MVP, arquitetura, testes e gestão Scrum. Na Sprint 3, a visita técnica e os refinamentos de interface aproximaram o protótipo do contexto de utilização, enquanto Product Backlog, Sprint Backlog, Definition of Done e cerimônias formalizaram o processo de Engenharia de Software.
+
+A entrega final centraliza os artefatos técnicos, visuais e de gestão necessários para demonstrar tanto a evolução do produto quanto o processo utilizado para construí-lo.
+
+---
+
+### SecurIT — Engenharia da Computação | FIAP
+**SafeVision AI • Challenge 2026**
