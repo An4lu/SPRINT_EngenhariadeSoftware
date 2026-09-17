@@ -87,24 +87,6 @@ A atividade permitiu relacionar decisões de interface a condições observadas 
 | Administrar dispositivos | Inventário de Câmeras |
 | Administrar acessos | Gestão de Usuários e Permissões |
 
-## Evidências visuais
-
-Além do link navegável do Figma, recomenda-se manter nesta pasta capturas das telas principais.
-
-Estrutura sugerida:
-
-```text
-evidencias-figma/
-├── README.md
-├── 01-dashboard.png
-├── 02-monitoramento.png
-├── 03-central-alertas.png
-├── 04-historico-evidencias.png
-├── 05-relatorios-auditoria.png
-├── 06-inventario-cameras.png
-└── 07-gestao-usuarios.png
-```
-
 As capturas ajudam a preservar uma evidência estática da versão utilizada na entrega, enquanto o link do Figma permite a navegação pelo protótipo.
 
 ## Critérios observados na revisão
