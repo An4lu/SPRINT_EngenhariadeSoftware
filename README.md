@@ -399,7 +399,6 @@ SPRINT_EngenhariadeSoftware/
     │   ├── SafeVision_AI_Sprint3_Documento_Final.docx
     │   ├── evidencias-trello/
     │   ├── evidencias-figma/
-    │   └── evidencias-visita-tecnica/
     │
     ├── levantamento-requisitos.md
     ├── personas.md
