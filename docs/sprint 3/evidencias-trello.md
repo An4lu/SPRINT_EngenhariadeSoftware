@@ -103,20 +103,6 @@ O acompanhamento registrado no projeto contempla:
 | 17/09/2026 | Sprint Review e consolidação |
 
 
-### Capturas recomendadas
-
-**01 — Board completo:** evidenciar as cinco colunas do fluxo Scrum.
-
-**02 — Product Backlog:** evidenciar os itens priorizados do produto.
-
-**03 — Sprint Backlog:** demonstrar as atividades selecionadas para a Sprint 3.
-
-**04 — Cards concluídos:** evidenciar a finalização das tarefas.
-
-**05 — Card detalhado:** abrir um card e demonstrar descrição, responsável, critérios de aceite e status.
-
----
-
 ## Conclusão
 
 O Trello foi utilizado como mecanismo de gestão visual e rastreabilidade da Sprint 3, permitindo relacionar planejamento, execução, responsabilidades e conclusão das atividades do SafeVision AI.
