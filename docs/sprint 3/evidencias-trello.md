@@ -102,21 +102,6 @@ O acompanhamento registrado no projeto contempla:
 | 25/08/2026 | Daily assíncrona |
 | 17/09/2026 | Sprint Review e consolidação |
 
-## Evidências visuais
-
-Para complementar este documento, podem ser adicionadas nesta pasta capturas de tela do board.
-
-Estrutura sugerida:
-
-```text
-evidencias-trello/
-├── README.md
-├── 01-board-completo.png
-├── 02-product-backlog.png
-├── 03-sprint-backlog.png
-├── 04-cards-concluidos.png
-└── 05-card-detalhado.png
-```
 
 ### Capturas recomendadas
 
